@@ -6,11 +6,12 @@ import ru.job4j.lifecycle.model.Product;
 
 @Configuration
 public class Config {
+
     @Bean(name = "myProduct",
-        initMethod = "initMethod",
-        destroyMethod = "destroyMethod"
+            initMethod = "initMethod",
+            destroyMethod = "destroyMethod"
     )
     public Product getProduct() {
-        return new Product("Milk", 2.5);
+        return new Product("Good Product", 2.5);
     }
 }

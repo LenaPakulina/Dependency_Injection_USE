@@ -7,8 +7,9 @@ import ru.job4j.lifecycle.model.Product;
 
 public class Main {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("lifecycle");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("ru/job4j/lifecycle");
         Config product = context.getBean(Config.class);
+        System.out.println("all");
         context.close();
     }
 }

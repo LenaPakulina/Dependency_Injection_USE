@@ -8,19 +8,19 @@ import ru.job4j.lifecycle.model.Product;
 @Component
 public class ProductBeanPostProcessor implements BeanPostProcessor {
 
-    @Override
-    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+    public Object postProcessBeforeInitialization(Object bean, String beanName)
+            throws BeansException {
         if (bean instanceof Product product) {
             System.out.printf("3. BeanPostProcessBeforeInitialization: '%s'%n", product);
         }
-        return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
+        return bean;
     }
 
-    @Override
-    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+    public Object postProcessAfterInitialization(Object bean, String beanName)
+            throws BeansException {
         if (bean instanceof Product product) {
             System.out.printf("5. BeanPostProcessAfterInitialization: '%s'%n", product);
         }
-        return BeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
+        return bean;
     }
 }
