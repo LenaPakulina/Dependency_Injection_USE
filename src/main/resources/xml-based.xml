@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="dogBean"
           name="dog"
-          class="ru.job4j.beanDefinition.xmlbased.animal.Dog"
+          class="ru.job4j.beandefinition.xmlbased.animal.Dog"
           scope="prototype"
           lazy-init="true"
           init-method="postConstruct"
@@ -14,13 +14,13 @@
 
     <bean id="catBean"
           name="cat"
-          class="ru.job4j.beanDefinition.xmlbased.animal.Cat"
+          class="ru.job4j.beandefinition.xmlbased.animal.Cat"
           factory-method="createCat">
         <constructor-arg name="name" value="Vaska" />
     </bean>
 
     <bean id="birdFactoryBean"
-          class="ru.job4j.beanDefinition.xmlbased.animal.BirdFactory"/>
+          class="ru.job4j.beandefinition.xmlbased.animal.BirdFactory"/>
 
     <bean id="parrotBean"
           name="parrot"
@@ -38,7 +38,7 @@
 
     <bean id="personBean"
           name="person"
-          class="ru.job4j.beanDefinition.xmlbased.Person"
+          class="ru.job4j.beandefinition.xmlbased.Person"
           lazy-init="true">
         <constructor-arg name="canary" ref="canary"/>
         <constructor-arg name="cat" ref="cat"/>
